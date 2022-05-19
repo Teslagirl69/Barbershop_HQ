@@ -6,7 +6,7 @@ require 'sinatra/activerecord'
 
 
 #устанавливаем и создаем БД
-set :database, {adapter: "sqlite3", database: "fbarbershop.db"}
+set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
 
 
