@@ -6,11 +6,13 @@ require 'sinatra/activerecord'
 
 
 #устанавливаем и создаем БД
-set :database, "sqlite3:barbershop.db"
+set :database, {adapter: "sqlite3", database: "fbarbershop.db"}
+
 
 
 # создаем сущность
-class Client < ActiveRecord::Base
+class Client  < Sinatra::Base
+	 register Sinatra::ActiveRecordExtension
 end
 
 get '/' do
