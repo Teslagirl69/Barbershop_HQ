@@ -10,9 +10,12 @@ set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
 
 
-# создаем сущность
-class Client  < Sinatra::Base
-	 register Sinatra::ActiveRecordExtension
+# создаем сущности - классы Client и Barber
+class Client  < ActiveRecord::Base
+
+end
+
+class Barber  < ActiveRecord::Base
 end
 
 get '/' do
