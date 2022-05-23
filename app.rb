@@ -56,7 +56,8 @@ post '/visit' do
 	erb "<h2> Спасибо, запись прошла успешно </h2>"
 
 	else
-	erb "<h2> Произошла ошибка. Пожалуйста, убедитесь, что все поля заполнены </h2>"
+		@error = @user.errors.full_messages.first
 
+	erb :visit
 	end
 end
