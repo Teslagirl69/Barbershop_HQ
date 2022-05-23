@@ -52,8 +52,11 @@ post '/visit' do
 
 	@user = Client.new params[:client]
 
- 	@user.save
+ 	if @user.save
+	erb "<h2> Спасибо, запись прошла успешно </h2>"
 
-	erb "<h2> пасибо, запись прошла успешно </h2>"
+	else
+	erb "<h2> Произошла ошибка. Пожалуйста, убедитесь, что все поля заполнены </h2>"
 
+	end
 end
