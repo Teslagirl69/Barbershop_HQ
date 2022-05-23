@@ -14,7 +14,7 @@ set :database, {adapter: "sqlite3", database: "barbershop.db"}
 class Client  < ActiveRecord::Base
 
 validates :name, presence: true
-validates :phone, presence: true
+validates :phone, presence: true, length: {minimum: 5}
 validates :datestamp, presence: true
 validates :barber, presence: true
 validates :color, presence: true
